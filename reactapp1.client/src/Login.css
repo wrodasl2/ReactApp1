@@ -1,85 +1,157 @@
 .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; /* Usar flexbox para el diseño del contenedor */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
     background-color: #000000; /* Color de fondo */
     width: 10px; /* Ancho del contenedor */
     height: 10px; /* Alto del contenedor */
     margin: auto; /* Centrar el contenedor en la página */
-    margin-left: 705px;
+    margin-left: 735px; /* Margen izquierdo específico */
+}
+
+/* Alinear íconos dentro de los campos */
+.input-container {
+    display: flex; /* Usar flexbox para el diseño del contenedor */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    border: 1px solid #ccc; /* Borde del contenedor */
+    border-radius: 4px; /* Bordes redondeados */
+    padding: 1px; /* Espaciado interno */
+    background-color: #fff; /* Color de fondo */
+    border: none; /* Sin borde */
+    outline: none; /* Sin contorno */
+    width: 100%; /* Ancho completo */
+    margin: auto; /* Centrar el contenedor */
+}
+
+    .input-container .icon {
+        margin-right: 10px; /* Espacio a la derecha del ícono */
+        color: #ccc; /* Color del ícono */
+    }
+
+.form-control {
+    border: none; /* Sin borde */
+    outline: none; /* Sin contorno */
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+}
+
+/* Estilo para el botón con ícono */
+.btn {
+    display: flex; /* Usar flexbox para el diseño del botón */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    gap: 0px; /* Espacio entre el ícono y el texto */
+    width: 60%; /* Ancho del botón */
+    height: 50px; /* Alto del botón */
+    padding: 10px; /* Espaciado interno */
+    background-color: #e88324; /* Color de fondo */
+    margin-left: 50px; /* Margen izquierdo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 7px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+}
+
+    .btn:hover {
+        background-color: #d61e96; /* Color de fondo al pasar el cursor */
+    }
+
+.loading-overlay {
+    position: absolute; /* Posición absoluta */
+    top: 0; /* Posición en la parte superior */
+    left: 0; /* Posición en la parte izquierda */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    display: flex; /* Usar flexbox para el diseño del overlay */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    z-index: 1000; /* Asegurar que el overlay esté por encima de otros elementos */
+}
+
+.error-message {
+    color: red; /* Color del texto */
+    background-color: #ffe6e6; /* Color de fondo */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 30px; /* Bordes redondeados */
+    margin-top: 1px; /* Margen superior */
+    text-align: center; /* Alinear el texto al centro */
+    font-weight: bold; /* Texto en negrita */
+    animation: fadeIn 0.8s ease-in-out; /* Animación de aparición */
+    position: absolute; /* Posición absoluta */
+    margin-left: 625px; /* Margen izquierdo */
+    height: 7%; /* Alto del mensaje */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Opacidad inicial */
+    }
+
+    to {
+        opacity: 1; /* Opacidad final */
+    }
 }
 
 .background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    position: absolute; /* Posición absoluta */
+    top: 0; /* Posición en la parte superior */
+    left: 0; /* Posición en la parte izquierda */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    object-fit: cover; /* Cubrir todo el contenedor */
     opacity: 0.1; /* Transparencia de la imagen de fondo */
 }
 
 .login-form {
-    text-align: center;
-    background: white;
-    padding: 60px;
-    border-radius: 80px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1; /* Para que el formulario esté sobre la imagen de fondo */
+    text-align: center; /* Alinear el texto al centro */
+    background: white; /* Color de fondo */
+    padding: 60px; /* Espaciado interno */
+    border-radius: 40px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra del contenedor */
+    z-index: 1; /* Asegurar que el formulario esté sobre la imagen de fondo */
     width: 400px; /* Ancho del contenedor */
     height: 600px; /* Alto del contenedor */
 }
 
 .logo-image {
-    display: block;
-    margin: 0 auto 20px;
-    position: relative;
+    display: block; /* Mostrar como bloque */
+    margin: 0 auto 20px; /* Centrar y añadir margen inferior */
+    position: relative; /* Posición relativa */
     width: 230px; /* Ancho de la imagen */
     height: 160px; /* Alto de la imagen */
-    position:center
+    position: center /* Centrar la imagen */
 }
 
 .logo-patrocinador {
-    display: block;
-    margin: 0 auto 10px;
-    position: center;
+    display: block; /* Mostrar como bloque */
+    margin: 0 auto 10px; /* Centrar y añadir margen inferior */
+    position: center; /* Centrar la imagen */
     width: 115px; /* Ancho de la imagen */
     height: 130px; /* Alto de la imagen */
-    margin-left: 55px;
+    margin-left: 55px; /* Margen izquierdo */
 }
 
 .form-group {
-    margin-bottom: 5px;
-    width: 215px; /* Ancho de la imagen */
-    height: 120px; /* Alto de la imagen */
-    margin: auto;
+    margin-bottom: 5px; /* Margen inferior */
+    width: 215px; /* Ancho del contenedor */
+    height: 120px; /* Alto del contenedor */
+    margin: auto; /* Centrar el contenedor */
+    margin-right: 10px; /* Margen derecho */
 }
 
 .form-control {
-    width: 80%;
-    position: center;
-    text-align: center;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    width: 80%; /* Ancho del campo */
+    position: center; /* Centrar el campo */
+    text-align: center; /* Alinear el texto al centro */
+    padding: 10px; /* Espaciado interno */
+    margin-top: 5px; /* Margen superior */
+    border: 1px solid #ccc; /* Borde del campo */
+    border-radius: 4px; /* Bordes redondeados */
 }
-
-.btn {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 7px;
-    cursor: pointer;
-}
-
-    .btn:hover {
-        background-color: #000000;
-    }
 
 h2 {
-    text-align: center;
-    margin-bottom: -20px;
+    text-align: center; /* Alinear el texto al centro */
+    margin-bottom: -20px; /* Margen inferior negativo */
 }

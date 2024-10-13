@@ -1,0 +1,73 @@
+.welcome-container {
+    display: flex;
+    height: 100vh;
+    margin-left: 150px; /* Espacio suficiente para el sidebar */
+    margin-right: 10px;
+    margin-left:  100px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.data-chart-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.data-container {
+    width: 40%; /* Reducimos el ancho del texto */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+}
+
+.chart-container {
+    width: 100%; /* Aumentamos el ancho de la gráfica */
+    height: 500px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gerencia-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.gerencia-info li {
+    padding: 10px;
+    font-size: 16px;
+    color: #2c3e50;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #34495e;
+}
+
+p {
+    font-size: 16px;
+    color: #7f8c8d;
+}
+
+t {
+    font-size: 26px;
+    color: #7f8c8d;
+    font-weight:600 ;
+}

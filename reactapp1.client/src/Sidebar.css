@@ -1,0 +1,137 @@
+.sidebar {
+    width: 250px; /* Ancho completo cuando no está colapsado */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    background-color: #ce3737;
+    font-size: 14px;
+    font-family: 'Arial Rounded MT', sans-serif;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    position: fixed; /* Fija el sidebar al borde izquierdo */
+    left: 0;
+    transition: width 5ms ease,opacity 2s;
+}
+
+.main-content.dimmed {
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none; /* Evita que el usuario pueda interactuar con el contenido mientras el sidebar está desplegado */
+}
+
+/* El overlay que aparece detrás del sidebar */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 250px; /* Ajusta este valor para coincidir con el ancho de tu sidebar */
+    width: calc(100% - 250px); /* Oscurece el resto de la página */
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Color del fondo oscuro */
+    z-index: 1000; /* Debe estar debajo del sidebar */
+    transition: opacity 0.7s ease;
+}
+
+/* Cuando el sidebar esté colapsado, el overlay debe desaparecer */
+.sidebar.collapsed + .sidebar-overlay {
+    display: none;
+}
+
+    .sidebar.collapsed {
+        width: 80px; /* Ancho reducido cuando está colapsado */
+    }
+
+.toggle-btn {
+    align-self: flex-end;
+    margin-right: 25px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 65px;
+    height: 65px;
+    border-radius: 10%;
+    margin-bottom: 5px;
+}
+
+.profile p {
+    color: #EEEEEE; /* Define el color del texto como blanco */
+}
+
+nav ul {
+    list-style-type:  unset;
+    padding: 0;
+    width: 100%; /* Los elementos ocupan todo el ancho del sidebar */
+    text-align: left;
+}
+
+    nav ul li {
+        margin: 10px 0;
+        padding-left: 1px; /* Agregar espacio a la izquierda para los iconos */
+    }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.5s;
+            padding: 10px 10px;
+            border-radius: 30px;
+        }
+
+            nav ul li a:hover {
+                background-color: #FFFFFF;
+                color: #000000;
+            }
+
+.icon {
+    font-size: 24px; /* Tamaño uniforme para los íconos */
+    margin-right: 40px; /* Espaciado entre icono y texto */
+}
+
+.sidebar.collapsed .icon {
+    margin-right: 0; /* Elimina el margen cuando está colapsado */
+}
+
+.logout {
+    margin-top: auto;
+    margin-bottom: 30px;
+    margin-right: -20px;
+    width: 100%;
+    text-align: center;
+}
+
+    .logout a {
+        color: black;
+        text-decoration: none;
+        padding: -20px;
+        background-color: #e0faf8;
+        border-radius: 7px;
+        transition: background-color 0.5s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: calc(100% - 90px);
+        font-size: 16px; /* Ajustar tamaño de fuente */
+    }
+
+.sidebar.collapsed .logout a {
+    justify-content: center;
+    padding: 10px;
+    width: 40%; /* Ajusta el ancho cuando el sidebar está colapsado */
+}
+
+.logout a:hover {
+    background-color: #00a7a9;
+    color: #EEEEEE;
+}

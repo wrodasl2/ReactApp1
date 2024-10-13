@@ -1,0 +1,127 @@
+/* Contenedor principal del componente UserInfo */
+.userinfo-container {
+    display: table; /* Usar display table para el contenedor */
+    margin-left: 10px; /* Espacio suficiente para el sidebar */
+    margin-right: 10px;
+    padding: 10px;
+    align-items: self-end; /* Alinear elementos al final */
+    width: 50px; /* Ancho del contenedor */
+    background-color: #F0F8FF; /* Color de fondo */
+}
+
+/* Contenido principal del componente UserInfo */
+.user-info-content {
+    align-items: center; /* Alinear elementos al centro */
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1220px; /* Ancho del contenido */
+    overflow-y: auto; /* Habilitar scroll vertical */
+    background-color: #FFFFFF; /* Color de fondo */
+    box-sizing: content-box; /* Incluir padding y border en el tamaño del elemento */
+}
+
+/* Clase para aumentar el tamaño del ícono */
+.large-icon {
+    font-size: 1.5em; /* Ajusta el tamaño del ícono aquí */
+}
+
+/* Clase para estilizar el botón de búsqueda */
+.icon-button {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el ícono y el texto */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #00a7a9; /* Color de fondo del botón */
+    color: #ffffff; /* Color del texto */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Tarjeta de usuario */
+.user-card {
+    display: flex; /* Usar flexbox para el layout */
+    align-items: center; /* Alinear elementos al centro */
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd; /* Borde de la tarjeta */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Color de fondo */
+    box-sizing: border-box; /* Incluir padding y border en el tamaño del elemento */
+}
+
+/* Estilo para el icono de usuario */
+.user-icon img {
+    width: 150px; /* Ancho del icono */
+    height: 150px; /* Alto del icono */
+    margin-right: 20px; /* Espacio a la derecha del icono */
+}
+
+/* Contenedor de detalles del usuario */
+.user-details {
+    flex: 1; /* Flex para ocupar el espacio disponible */
+    margin-right: 20px; /* Espacio a la derecha */
+}
+
+    /* Estilo para los párrafos dentro de los detalles del usuario */
+    .user-details p {
+        margin: 4px 0; /* Margen vertical */
+        font-size: 18px; /* Tamaño de fuente */
+    }
+
+/* Barra de búsqueda */
+.search-bar {
+    display: flex; /* Usar flexbox para el layout */
+    justify-content: space-between; /* Espacio entre los elementos */
+    gap: 10px; /* Espacio entre los elementos */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+    /* Estilo para los inputs dentro de la barra de búsqueda */
+    .search-bar input {
+        flex: 1; /* Flex para ocupar el espacio disponible */
+        padding: 10px; /* Padding interno */
+        font-size: 16px; /* Tamaño de fuente */
+        margin-right: 10px; /* Espacio a la derecha */
+    }
+
+    /* Estilo para los botones dentro de la barra de búsqueda */
+    .search-bar button {
+        padding: 10px 20px; /* Padding interno */
+        font-size: 16px; /* Tamaño de fuente */
+        background-color: #00a7a9; /* Color de fondo */
+        color: #ffffff; /* Color del texto */
+        border: none; /* Sin borde */
+        border-radius: 5px; /* Bordes redondeados */
+        cursor: pointer; /* Cursor de puntero */
+        transition: background-color 0.3s, color 0.3s; /* Transición para el hover */
+    }
+
+        /* Estilo para el hover de los botones */
+        .search-bar button:hover {
+            background-color: #de9143; /* Color de fondo en hover */
+            color: #000000; /* Color del texto en hover */
+        }
+
+/* Overlay de carga */
+.loading-overlay {
+    position: absolute; /* Posición absoluta */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    display: flex; /* Usar flexbox para el layout */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+}
+
+/* Estilo para el icono de carga */
+.loading-icon {
+    width: 50px; /* Ancho del icono */
+    height: 50px; /* Alto del icono */
+}

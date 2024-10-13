@@ -1,0 +1,11 @@
+.layout-container {
+    display: flex;
+    height: 100vh; /* Para ocupar toda la pantalla */
+}
+
+.content {
+    flex: 10;
+    padding: -2px;
+    background-color: aliceblue;
+    overflow-y: auto;
+}

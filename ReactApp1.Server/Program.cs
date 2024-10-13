@@ -1,19 +1,30 @@
+using Microsoft.EntityFrameworkCore;
+using ReactApp1.Server.Data;
+
 var builder = WebApplication.CreateBuilder(args);
+
 
 // Add services to the container.
 builder.Services.AddControllers();
 
+
+//configuración del DbContext aquí
+builder.Services.AddDbContext<YourDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 // Configuración de CORS
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowSpecificOrigin",
+    options.AddPolicy("AllowAnyOrigin",
         builder =>
         {
-            builder.WithOrigins("https://localhost:5173")
+            builder.AllowAnyOrigin()
                    .AllowAnyHeader()
                    .AllowAnyMethod();
         });
 });
+
+
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -21,7 +32,10 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 // Use CORS
-app.UseCors("AllowSpecificOrigin");
+app.UseCors("AllowAnyOrigin");
+
+
+
 
 // Otros middlewares
 if (app.Environment.IsDevelopment())
